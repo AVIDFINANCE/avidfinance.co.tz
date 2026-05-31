@@ -7,12 +7,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!-- SEO Meta Tags -->
-    <title>@yield('title', 'Together Financial Services')</title>
-    <meta name="description" content="@yield('description', 'Professional microfinance management system for institutions in Tanzania. Manage loans, clients, repayments, and reporting with ease.')">
-    <meta name="keywords" content="microfinance, loan management, Tanzania, Together Financial Services, financial software">
+    <title>@yield('title', 'Avid Finance Limited')</title>
+    <meta name="description" content="@yield('description', 'Mfumo wa kitaalamu wa usimamizi wa mikopo kwa taasisi za fedha nchini Tanzania. Simamia wateja, mikopo, malipo, na ripoti kwa urahisi.')">
+    <meta name="keywords" content="microfinance, loan management, Tanzania, Avid Finance Limited, financial software">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="@yield('title', 'Together Financial Services')">
+    <meta property="og:title" content="@yield('title', 'Avid Finance Limited')">
     <meta property="og:description" content="@yield('description', 'Professional microfinance management system for institutions in Tanzania.')">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
@@ -24,7 +24,7 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .gradient-bg { background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%); }
         .card-hover { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
         /* Responsive media defaults */
@@ -41,10 +41,10 @@
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center">
-                        <div class="w-8 h-8 bg-pink-600 rounded-lg flex items-center justify-center mr-3">
-                            <span class="text-white font-bold text-sm">T</span>
+                        <div class="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">A</span>
                         </div>
-                        <span class="text-xl font-semibold text-gray-900">TOGETHER FINANCIAL SERVICES</span>
+                        <span class="text-xl font-semibold text-gray-900">AVID FINANCE LIMITED</span>
                     </a>
                 </div>
                 
@@ -52,14 +52,20 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="{{ route('home') }}" class="text-gray-700 hover:text-blue-600 transition-colors">{{ __('messages.home') }}</a>
                     <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">{{ __('messages.features') }}</a>
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 text-sm">
+                        <a href="{{ route('language.switch', 'sw') }}" class="px-2 py-1 rounded {{ app()->getLocale() == 'sw' ? 'bg-blue-700 text-white' : 'text-gray-600 hover:text-blue-700' }}">SW</a>
+                        <span class="text-gray-400">|</span>
+                        <a href="{{ route('language.switch', 'en') }}" class="px-2 py-1 rounded {{ app()->getLocale() == 'en' ? 'bg-blue-700 text-white' : 'text-gray-600 hover:text-blue-700' }}">EN</a>
+                    </div>
                 </div>
                 
                 <!-- Auth Buttons - Desktop -->
                 <div class="hidden md:flex items-center space-x-4">
                     @guest
-                        <a href="{{ route('login') }}" class="text-gray-700 hover:text-pink-600 transition-colors">{{ __('messages.login') }}</a>
+                        <a href="{{ route('login') }}" class="text-gray-700 hover:text-blue-600 transition-colors">{{ __('messages.login') }}</a>
                     @else
-                        <a href="{{ route('dashboard') }}" class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors">{{ __('messages.dashboard') }}</a>
+                        <a href="{{ route('dashboard') }}" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">{{ __('messages.dashboard') }}</a>
                     @endguest
                 </div>
                 
@@ -77,15 +83,19 @@
         <!-- Mobile menu -->
         <div x-data="{ open: false }" x-on:toggle-mobile-menu.window="open = !open" x-show="open" x-transition class="md:hidden border-t border-gray-200">
             <div class="px-4 py-3 space-y-3">
-                <a href="{{ route('home') }}" class="block text-gray-700 hover:text-pink-600">{{ __('messages.home') }}</a>
-                <a href="#features" class="block text-gray-700 hover:text-pink-600">{{ __('messages.features') }}</a>
+                <a href="{{ route('home') }}" class="block text-gray-700 hover:text-blue-700">{{ __('messages.home') }}</a>
+                <a href="#features" class="block text-gray-700 hover:text-blue-700">{{ __('messages.features') }}</a>
+                <div class="flex items-center space-x-2 text-sm">
+                    <a href="{{ route('language.switch', 'sw') }}" class="px-2 py-1 rounded {{ app()->getLocale() == 'sw' ? 'bg-blue-700 text-white' : 'text-gray-600' }}">Kiswahili</a>
+                    <a href="{{ route('language.switch', 'en') }}" class="px-2 py-1 rounded {{ app()->getLocale() == 'en' ? 'bg-blue-700 text-white' : 'text-gray-600' }}">English</a>
+                </div>
                 @guest
                     <div class="pt-3 border-t border-gray-200">
-                        <a href="{{ route('login') }}" class="block text-gray-700 hover:text-pink-600 mb-2">{{ __('messages.sign_in') }}</a>
+                        <a href="{{ route('login') }}" class="block text-gray-700 hover:text-blue-700 mb-2">{{ __('messages.sign_in') }}</a>
                     </div>
                 @else
                     <div class="pt-3 border-t border-gray-200">
-                        <a href="{{ route('dashboard') }}" class="block bg-pink-600 text-white px-4 py-2 rounded-lg text-center">{{ __('messages.go_to_dashboard') }}</a>
+                        <a href="{{ route('dashboard') }}" class="block bg-blue-700 text-white px-4 py-2 rounded-lg text-center">{{ __('messages.go_to_dashboard') }}</a>
                     </div>
                 @endguest
             </div>
@@ -104,12 +114,12 @@
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center mb-4">
-                        <div class="w-8 h-8 bg-pink-600 rounded-lg flex items-center justify-center mr-3">
-                            <span class="text-white font-bold text-sm">T</span>
+                        <div class="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">A</span>
                         </div>
-                        <span class="text-xl font-semibold">TOGETHER FINANCIAL SERVICES</span>
+                        <span class="text-xl font-semibold">AVID FINANCE LIMITED</span>
                     </div>
-                    <p class="text-gray-400 mb-4">Together Financial Services is a licensed microfinance institution based in Mkuranga, Pwani, Tanzania. We provide accessible and affordable financial services including individual loans, group loans, and staff loans to empower communities and drive economic growth.</p>
+                    <p class="text-gray-400 mb-4">Avid Finance Limited ni taasisi ya fedha ndogo iliyoidhinishwa iliyoko Dar es Salaam Tanzania. Tunatoa huduma za kifedha zinazoweza kupatikana na za bei nafuu ikijumuisha mikopo ya kibinafsi, mikopo ya vikundi, na mikopo ya wafanyakazi.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -138,15 +148,16 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li>TOGETHER FINANCIAL SERVICES</li>
-                        <li>Mkuranga, Pwani</li>
-                        <li>0659130440</li>
+                        <li>AVID FINANCE LIMITED</li>
+                        <li>Dar es Salaam Tanzania</li>
+                        <li>📞 0758704774</li>
+                        <li>✉ info@avidfinance.co.tz</li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; {{ date('Y') }} Together Financial Services. All rights reserved.</p>
+                <p>&copy; {{ date('Y') }} Avid Finance Limited. {{ __('messages.all_rights_reserved') }}.</p>
             </div>
         </div>
     </footer>

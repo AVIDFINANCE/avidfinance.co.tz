@@ -1,11 +1,11 @@
 @extends('layouts.public')
 
-@section('title', 'Together Financial Services - Professional Microfinance Management System')
-@section('description', 'Streamline your microfinance operations with Together Financial Services. Manage loans, clients, repayments, and reporting efficiently. Trusted by institutions across Tanzania.')
+@section('title', 'Avid Finance Limited - Mfumo wa Usimamizi wa Mikopo')
+@section('description', 'Rahisisha shughuli zako za fedha ndogo na Avid Finance Limited. Simamia mikopo, wateja, malipo, na ripoti kwa ufanisi. Inayoaminika na taasisi kote Tanzania.')
 
 @section('content')
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-pink-600 via-rose-500 to-pink-700 relative overflow-hidden" id="hero-section">
+<section class="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-800 relative overflow-hidden" id="hero-section">
     <div class="absolute inset-0 bg-black opacity-10"></div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 z-10">
@@ -120,9 +120,9 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Individual Loans -->
-            <div class="bg-pink-50 border border-pink-100 p-8 rounded-2xl shadow-sm card-hover text-center">
-                <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-blue-50 border border-blue-100 p-8 rounded-2xl shadow-sm card-hover text-center">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                     </svg>
                 </div>
@@ -130,9 +130,9 @@
                 <p class="text-gray-600 leading-relaxed">Personal financing tailored for individual borrowers. Quick approval, flexible repayment schedules, and competitive interest rates to help you achieve your goals.</p>
             </div>
             <!-- Group Loans -->
-            <div class="bg-rose-50 border border-rose-100 p-8 rounded-2xl shadow-sm card-hover text-center">
-                <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <svg class="w-8 h-8 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-yellow-50 border border-yellow-100 p-8 rounded-2xl shadow-sm card-hover text-center">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                 </div>
@@ -140,9 +140,9 @@
                 <p class="text-gray-600 leading-relaxed">Community-based lending for groups of borrowers who guarantee each other. Stronger together — shared responsibility with lower risk and better access to credit.</p>
             </div>
             <!-- Staff Loans -->
-            <div class="bg-fuchsia-50 border border-fuchsia-100 p-8 rounded-2xl shadow-sm card-hover text-center">
-                <div class="w-16 h-16 bg-fuchsia-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <svg class="w-8 h-8 text-fuchsia-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-blue-50 border border-blue-100 p-8 rounded-2xl shadow-sm card-hover text-center">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
                 </div>
