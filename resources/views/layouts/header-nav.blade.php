@@ -44,8 +44,8 @@
              class="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-50">
             <div class="p-4">
                 <div class="flex items-center justify-between mb-3">
-                    <h3 class="text-lg font-medium text-gray-900">Notifications</h3>
-                    <button class="text-sm text-primary-600 hover:text-primary-500">Mark all read</button>
+                    <h3 class="text-lg font-medium text-gray-900">{{ __('messages.notifications') }}</h3>
+                    <button class="text-sm text-primary-600 hover:text-primary-500">{{ __('messages.mark_all_read') }}</button>
                 </div>
                 
                 <div class="space-y-3 max-h-96 overflow-y-auto">
@@ -67,14 +67,14 @@
                     </template>
                     
                     <div x-show="notifications.length === 0" class="text-center py-6 text-gray-500">
-                        No notifications
+                        {{ __('messages.no_notifications') }}
                     </div>
                 </div>
                 
                 <div class="mt-3 pt-3 border-t border-gray-200">
                     <a href="{{ route('notifications.index') }}" 
                        class="block text-center text-sm text-primary-600 hover:text-primary-500">
-                        View all notifications
+                        {{ __('messages.view_all') }}
                     </a>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                     <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                     </svg>
-                    My Profile
+                    {{ __('messages.my_profile') }}
                 </a>
 
                 @can('super-admin')
@@ -135,7 +135,7 @@
                     <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                     </svg>
-                    Admin Panel
+                    {{ __('messages.admin_panel') }}
                 </a>
                 @endcan
                 
@@ -148,7 +148,7 @@
                         <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
                         </svg>
-                        Sign out
+                        {{ __('messages.sign_out') }}
                     </button>
                 </form>
             </div>
@@ -156,7 +156,7 @@
     </div>
     @else
     @if (!request()->routeIs('login'))
-    <a href="{{ route('login') }}" class="text-sm text-primary-600 hover:underline">Sign in</a>
+    <a href="{{ route('login') }}" class="text-sm text-primary-600 hover:underline">{{ __('messages.sign_in') }}</a>
     @endif
     @endauth
 </div>

@@ -3,8 +3,6 @@
     $languages = [
         'sw' => ['name' => 'Kiswahili', 'flag' => '🇹🇿', 'short' => 'SW'],
         'en' => ['name' => 'English',   'flag' => '🇬🇧', 'short' => 'EN'],
-        'fr' => ['name' => 'Français',  'flag' => '🇫🇷', 'short' => 'FR'],
-        'ar' => ['name' => 'العربية',   'flag' => '🇸🇦', 'short' => 'AR'],
     ];
     $current = $languages[$currentLocale] ?? $languages['sw'];
 @endphp

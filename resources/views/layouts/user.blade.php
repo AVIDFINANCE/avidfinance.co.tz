@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} - User Portal</title>
+    <title>{{ config('app.name', 'AVID FINANCE LIMITED') }} - {{ __('messages.user_portal') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -98,7 +98,7 @@
 
                     <!-- Logo -->
                     <div class="flex items-center">
-                        <h1 class="text-xl font-semibold text-blue-900">User Portal</h1>
+                        <h1 class="text-xl font-semibold text-blue-900">AVID FINANCE LIMITED</h1>
                     </div>
 
                     <!-- User Navigation -->
@@ -140,16 +140,16 @@
                                         </span>
                                     @endif
                                 </div>
-                                <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Profile</a>
+                                <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ __('messages.my_profile') }}</a>
                                 <div class="border-t border-gray-100"></div>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign Out</button>
+                                    <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ __('messages.sign_out') }}</button>
                                 </form>
                             </div>
                         </div>
                         @else
-                        <a href="{{ route('login') }}" class="text-sm text-blue-600 hover:underline">Sign in</a>
+                        <a href="{{ route('login') }}" class="text-sm text-blue-600 hover:underline">{{ __('messages.sign_in') }}</a>
                         @endauth
                     </div>
                 </div>
