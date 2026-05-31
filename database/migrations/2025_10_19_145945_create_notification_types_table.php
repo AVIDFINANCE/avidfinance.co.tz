@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name'); // e.g., 'Payment Successful'
             $table->string('category'); // e.g., 'payment_billing'
             $table->text('description')->nullable();
-            $table->json('default_channels')->default('["database"]'); // ['database', 'mail', 'sms']
+            $table->json('default_channels')->nullable(); // ['database', 'mail', 'sms']
             $table->json('template_data')->nullable(); // Template variables and structure
             $table->boolean('is_active')->default(true);
             $table->boolean('user_configurable')->default(true); // Can users turn this on/off
