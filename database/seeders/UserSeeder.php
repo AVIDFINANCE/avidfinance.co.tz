@@ -41,28 +41,6 @@ class UserSeeder extends Seeder
             ]
         );
 
-        // Create demo admin user if not exists
-        User::updateOrCreate(
-            ['email' => 'bagokap.8275@gmail.com'],
-            [
-                'tenant_id' => $tenant->id,
-                'name' => 'Admin User',
-                'password' => Hash::make('Phidtech@@2023'),
-                'role' => 'admin',
-                'email_verified_at' => now(),
-            ]
-        );
-
-        // Create demo regular user if not exists
-        User::updateOrCreate(
-            ['email' => 'user@phidtech.com'],
-            [
-                'tenant_id' => $tenant->id,
-                'name' => 'Regular User',
-                'password' => Hash::make('password'),
-                'role' => 'officer',
-                'email_verified_at' => now(),
-            ]
-        );
+        // Demo users removed - use SuperAdminSeeder for the admin account
     }
 }
