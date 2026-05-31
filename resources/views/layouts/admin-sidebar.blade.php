@@ -7,11 +7,11 @@
     <!-- Logo Section -->
     <div class="flex items-center justify-center h-16 px-4 bg-gradient-to-r from-slate-800 to-slate-900">
         <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center shadow-md">
-                <span class="text-white font-bold text-lg">T</span>
+            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-md">
+                <span class="text-white font-bold text-lg">A</span>
             </div>
             <div>
-                <span class="text-white font-semibold text-base leading-tight">TOGETHER FINANCIAL</span>
+                <span class="text-white font-semibold text-base leading-tight">AVID FINANCE LIMITED</span>
                 <span class="text-slate-300 text-xs block">Admin Panel</span>
             </div>
         </div>
