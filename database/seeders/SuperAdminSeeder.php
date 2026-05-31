@@ -36,10 +36,10 @@ class SuperAdminSeeder extends Seeder
                 'tenant_id' => $tenant->id,
                 'name' => env('SUPERADMIN_NAME', 'Avid Finance Admin'),
                 'password' => Hash::make($password),
-                // users.role enum does not include superadmin; set to admin for compatibility
                 'role' => 'admin',
                 'email_verified_at' => now(),
-                'position' => 'superadmin',
+                'position' => null,
+                'admin_role_id' => null,
             ]
         );
 

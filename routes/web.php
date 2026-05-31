@@ -210,24 +210,8 @@ Route::middleware('auth')->group(function () {
 // Authenticated routes with tenant resolution
 Route::middleware(['auth', 'resolve.tenant', 'tenant.access'])->group(function () {
     
-    // Dashboard - Role-based routing
+    // Dashboard - Always go to tenant dashboard (single-tenant system)
     Route::get('/dashboard', function () {
-        $user = auth()->user();
-
-        \Log::info('Dashboard route accessed', [
-            'user_id' => $user->id,
-            'email' => $user->email,
-            'role' => $user->role,
-            'position' => $user->position,
-            'tenant_id' => $user->tenant_id,
-            'admin_role_id' => $user->admin_role_id,
-        ]);
-
-        // Route admin staff to admin dashboard, everyone else to user dashboard
-        if ($user->admin_role_id) {
-            return redirect()->route('admin.dashboard');
-        }
-
         return redirect()->route('user.dashboard');
     })->name('dashboard');
     

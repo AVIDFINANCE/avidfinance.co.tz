@@ -24,20 +24,6 @@ class UserDashboardController extends Controller
     public function index()
     {
         $user = auth()->user();
-        
-        // Redirect admin staff to admin dashboard
-        if ($user->admin_role_id) {
-            return redirect()->route('admin.dashboard');
-        }
-        
-        // Redirect superadmin to admin dashboard
-        $superAliases = ['super_admin', 'superadmin', 'super-admin', 'super admin'];
-        $isSuperAdmin = in_array(strtolower($user->role ?? ''), $superAliases) || 
-                       strtolower($user->position ?? '') === 'superadmin';
-        
-        if ($isSuperAdmin) {
-            return redirect()->route('admin.dashboard');
-        }
 
         // ---------------------------------------------------------------
         // PORTFOLIO & OUTSTANDING — industry-standard schedule-based calc
