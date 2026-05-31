@@ -87,22 +87,6 @@ class LoginController extends Controller
             }
 
             $user = Auth::user();
-            
-            // Check if user is superadmin based on role or position
-            $superAliases = ['super_admin', 'superadmin', 'super-admin', 'super admin'];
-            $isSuperAdmin = in_array(strtolower($user->role ?? ''), $superAliases) || 
-                           strtolower($user->position ?? '') === 'superadmin';
-            
-            if ($isSuperAdmin) {
-                \Log::info('Redirecting super admin to admin dashboard', ['user_id' => $user->id, 'role' => $user->role, 'position' => $user->position]);
-                return redirect()->route('admin.dashboard');
-            }
-            
-            // Check if user is admin staff member (has admin_role_id)
-            if ($user->admin_role_id) {
-                \Log::info('Redirecting admin staff to admin dashboard', ['user_id' => $user->id, 'admin_role_id' => $user->admin_role_id]);
-                return redirect()->route('admin.dashboard');
-            }
 
             \Log::info('Redirecting user to dashboard', ['user_id' => $user->id, 'tenant_id' => $user->tenant_id]);
             return redirect()->intended(route('dashboard'));

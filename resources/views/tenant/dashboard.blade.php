@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Tenant Dashboard')
+@section('title', 'AVID FINANCE LIMITED - Dashboard')
 
 @section('content')
 <div class="container mx-auto px-4 py-6">
     <div class="mb-6">
-        <h1 class="text-2xl font-bold text-gray-900">Dashboard</h1>
-        <p class="text-gray-600">Welcome back! Here's an overview of your organization.</p>
+        <h1 class="text-2xl font-bold text-gray-900">AVID FINANCE LIMITED</h1>
+        <p class="text-gray-600">{{ __('messages.welcome_back') }} — {{ __('messages.overview') }}</p>
     </div>
 
     <!-- Stats Cards -->

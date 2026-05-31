@@ -974,7 +974,7 @@ return [
 
     // Login page
     'sign_in_to_account' => 'Ingia kwenye akaunti yako',
-    'welcome_back' => 'Karibu tena kwenye PhidTech LMS',
+    'welcome_back' => 'Karibu tena kwenye AVID FINANCE LIMITED',
     'email_address' => 'Barua pepe',
     'enter_email' => 'Ingiza barua pepe yako',
     'enter_password' => 'Ingiza nywila yako',
